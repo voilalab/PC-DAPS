@@ -1,0 +1,15 @@
+gpu: 0
+batch_size: 10
+num_runs: 1
+save_dir: ./results
+name: demo
+wandb: False
+save_samples: True
+save_traj: True
+save_traj_video: False
+save_traj_raw_data: False
+show_eval: False
+eval_fn_list: ['psnr', 'ssim', 'lpips']
+task_group: pixel  # pixel or pixel_hmc
+project_name: 'DAPS'
+seed: 42

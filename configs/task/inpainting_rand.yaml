@@ -1,0 +1,34 @@
+# pixel space task
+pixel:
+  mcmc_sampler_config:  
+    num_steps: 100
+    lr: 1e-4
+    tau: 0.01
+    lr_min_ratio: 0.01
+    mc_algo: langevin
+    prior_solver: gaussian
+  
+  operator:
+    name: inpainting
+    mask_type: random  
+    mask_prob_range: [ 0.70, 0.71 ]  # for random
+    resolution: 256
+    sigma: 0.05
+
+# pixel space task with hmc
+pixel_hmc:
+  mcmc_sampler_config:  
+    num_steps: 11
+    lr: 3.56e-5
+    tau: 0.01
+    lr_min_ratio: 0.015
+    momentum: 0.80
+    mc_algo: hmc
+    prior_solver: gaussian
+  
+  operator:
+    name: inpainting
+    mask_type: random  
+    mask_prob_range: [ 0.70, 0.71 ]  # for random
+    resolution: 256
+    sigma: 0.05

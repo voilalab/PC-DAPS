@@ -1,0 +1,15 @@
+# pixel space task
+pixel:
+  mcmc_sampler_config:  
+    num_steps: 100
+    lr: 1e-4
+    tau: 0.01
+    lr_min_ratio: 0.01
+    mc_algo: langevin
+    prior_solver: gaussian
+  
+  operator:
+    name: high_pass
+    kernel_size: 61
+    intensity: 5
+    sigma: 0.05

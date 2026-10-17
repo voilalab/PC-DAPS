@@ -1,0 +1,39 @@
+name: pcdaps
+
+annealing_scheduler_config:
+  name: 'edm'
+  num_steps: 200
+  sigma_max: 100
+  sigma_min: 0.1
+  timestep: 'poly-7'
+
+diffusion_scheduler_config:
+  name: 'edm'
+  num_steps: 5             
+  sigma_min: 0.01
+  timestep: 'poly-7'
+
+pcdaps_config:
+  bag_size: 4
+  ode_steps_high_noise: 1   
+  ode_switch_ratio: 0.65
+  skip_final_langevin: True    
+  prune: True
+  gamma: 0.065                 
+  residual_test: noisy         
+  stop_after_first_check: True 
+  pruning_stages:              
+    - {residual_test: tweedie, gamma: 0.15, stop_after_first_check: False}             
+    - {residual_test: noisy, gamma: 0.065, stop_after_first_check: True, sigma_max: 1.0}  
+  score_sigmas: [0.5, 1.0, 2.0]
+  score_num_samples: 1
+  cluster_resolution: 32
+  cluster_pca_variance: 0.9
+  cluster_eps: 0.15
+  max_clusters: null
+  mixture_center: tweedie      
+  var_floor: 1.0e-4
+  langevin_scheme: semi-implicit   
+  cluster_before_pruning: False
+  calibrate: False
+  seed: 42
