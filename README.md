@@ -72,6 +72,13 @@ python toy/two_atom.py        # premature mode selection on a two-atom prior (Fi
 python toy/gmm_langevin.py    # Langevin refinement under the Gaussian-mixture approximation (Fig. 4)
 ```
 
+## Reproduction
+
+If you would like to use our code base for comparisons, either to compare against PC-DAPS or baselines present in our paper, and run into issues reproducing numerical results present in the main paper or Appendix, we encourage you to open an issue so that we can assist you. We note that multiple algorithms in the repo (including DAPS and PC-DAPS) are sensitive to the PRNG and GPU used, and can result in significant differences in PSNR/SSIM/LPIPS. If your reproducibility issues are with PC-DAPS, we ask that you first reference similar discussions for DAPS, as most existing advice transfers:
+
+- [DAPS/issues/16](https://github.com/zhangbingliang2019/DAPS/issues/16)
+- [DAPS/issues/14](https://github.com/zhangbingliang2019/DAPS/issues/14)
+
 ## Acknowledgements
 
 This codebase builds directly on prior open-source work [DAPS](https://github.com/zhangbingliang2019/DAPS) (Zhang et al., CVPR 2025).
