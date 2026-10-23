@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://mervekocabas.github.io/PCDAPS/">[Project Page]</a>
-  <a href="coming soon">[Paper (arxiv soon)]</a>
+  <a href="https://arxiv.org/abs/2610.31592">[Paper]</a>
 </p>
 
 ![PC-DAPS teaser](README.assets/pcdaps_teaser.gif)
@@ -88,6 +88,11 @@ This codebase builds directly on prior open-source work [DAPS](https://github.co
 If you find this work useful in your research, please consider citing it:
 
 ```bib
-Arxiv soon
+@misc{kocabas2026pcdaps,
+  title  = {Beyond Best-of-$k$: Prior-Consistent DAPS for Ambiguous Nonlinear Inverse Problems},
+  author = {Kocabas, Merve and Burns, Benjamin A. and Geiger, Andreas and Gauen, Kent and Fridovich-Keil, Sara},
+  year   = {2026},
+  url    = {https://arxiv.org/abs/2610.31592}
+}
 ```
 
